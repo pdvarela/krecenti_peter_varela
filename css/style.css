@@ -1,0 +1,532 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+
+/*---------------------------- HEADER ------------------------- */
+
+/* Quitamos los estilos del toggler icon de Boostrap */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Animacion underline para anchors del navbar */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    /* Evita que el underline se vea del ancho de la pantalla en el menu hamb desplegado */
+    display: inline-block;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 0;
+    background-color: #0EAE93;
+    /* Cambia el color a tu preferencia */
+    transition: width 0.4s ease-out;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    transition: width 0.4s ease-out;
+}
+
+.nav-link:hover::after {
+    width: 0;
+    transition: width 0.4s ease-out;
+}
+
+.nav-link:hover::before {
+    left: 0;
+}
+
+.nav-link:hover::after {
+    right: 0;
+}
+
+
+/* Animacion logo navbar */
+.logo {
+    transition: transform 0.6s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.0625);
+}
+
+.logo:hover~.logo {
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/*---------------------------- BODY ------------------------- */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto;
+    overflow: hidden;
+    gap: 4em;
+    height: 100%;
+}
+
+
+/*---------------------------- FOOTER ------------------------- */
+footer {
+    background-color: #1B2DCC;
+    /* height: 10vh; */
+    width: 100vw;
+    overflow: hidden;
+    align-self: center;
+    margin-top: auto;
+    padding: 2.5em 2em 0em 2em;
+    padding-bottom: 1em;
+    font-size: small;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+footer ul {
+    padding: 1em 1em 0em 1em;
+}
+
+.containerf {
+    /* background-color: blueviolet; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    gap: 10px;
+    overflow: hidden;
+    /* align-items: center; */
+    gap: 0.25em;
+}
+
+.logof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 1em 1em 0em;
+    margin: 1em 1em 1em 0em;
+    /* background-color: #2ce99a; */
+}
+
+.logof img {
+    width: 4em;
+}
+
+.containerf li {
+    list-style: none;
+}
+
+.containerf li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+.containerf li p {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* Efectos footer */
+
+.containerf ul li a:hover {
+    content: '';
+    /* position: absolute; */
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 0;
+    color: #ced9df;
+    /* Cambia el color a tu preferencia */
+    transition: width 0.4s ease-out;
+}
+
+.logof a img:hover {
+    transform: rotate(360deg);
+    transition: 0.4s cubic-bezier(0.655, 0.1, 0.615, 0.555);
+}
+
+
+/* -------------------- MAIN -------------------------- */
+
+/* Animacion circulos */
+.circle1 {
+    animation: float 2.5s ease-in-out infinite;
+    fill: #1B2DCC;
+    filter: none;
+}
+
+.circle2 {
+    animation: float2 4s ease-in-out infinite;
+    fill: #1B2DCC;
+    filter: none;
+    /* animation-duration: 5s; */
+}
+
+.circle3 {
+    animation: float3 3s ease-in-out infinite;
+    fill: #1B2DCC;
+    filter: none;
+}
+
+.circle1:hover {
+    fill: #0EAE93;
+    filter: blur(2px);
+    transition: 0.85s;
+}
+
+.circle2:hover {
+    fill: #1B2DCC;
+    filter: blur(2px);
+    transition: 0.65s;
+}
+
+.circle3:hover {
+    fill: #D33226;
+    filter: blur(2px);
+    transition: 0.85s;
+}
+
+/* Animaciones independientes para cada circulo de valor */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        transform: translate3d(12px, 4px, -10px) scale(1);
+    }
+
+    25% {
+
+        transform: translateY(-13px);
+        transform: translate3d(6px, -25px, -5px) scale(1.125);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        transform: translate3d(-7px, -2px, -3px) scale(1.25);
+    }
+
+    100% {
+        transform: translateY(0);
+        transform: translate3d(12px, 4px, -10px) scale(1);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0);
+        transform: translate3d(8px, 10px, -10px) scale(1);
+    }
+
+    25% {
+        transform: translateY(-10px);
+        transform: translate3d(30px, 13px, -3px) scale(0.85);
+
+    }
+
+    50% {
+        transform: translateY(-13px);
+        transform: translate3d(-5px, -25px, -5px) scale(1.125);
+    }
+
+    100% {
+        transform: translateY(0);
+        transform: translate3d(8px, 10px, -10px) scale(1);
+    }
+}
+
+@keyframes float3 {
+    0% {
+        transform: translateY(0);
+        transform: translate3d(12px, 4px, -10px) scale(1);
+    }
+
+    25% {
+        transform: translateY(-10px);
+        transform: translate3d(-7px, -2px, -3px) scale(1.30);
+
+    }
+
+    50% {
+        transform: translateY(-13px);
+        transform: translate3d(-9px, -23px, 7px) scale(1.125);
+    }
+
+    100% {
+        transform: translateY(0);
+        transform: translate3d(12px, 4px, -10px) scale(1);
+    }
+}
+
+
+/* SECCION1 INDEX */
+
+/* estructura animacion*/
+
+.container_seccion1_index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 4em 2em 20em 2em;
+    height: 100vh;
+}
+
+.container_seccion1_index h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 12em;
+    font-size: 2.5em;
+    color: #1e1e1e;
+    font-weight: 300;
+    padding: 1em 1em 1em 1em;
+
+}
+
+.container_animacion {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 1em;
+    max-width: 50em;
+    max-height: 100%;
+}
+
+/* SECCION2 INDEX */
+.container_seccion2_index {
+    background-color: #1B2DCC;
+    min-height: 20em;
+    height: 120vh;
+}
+
+.container_seccion3_index {
+    background-color: white;
+    min-height: 20em;
+    height: 120vh;
+}
+
+
+
+
+/*--------------------------------- SECCION CONTACTO-------------------------------- */
+
+.container_seccion_contacto {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10em;
+}
+
+.header_contacto {
+    background-image: linear-gradient(to right, #1B2DCC, #0059fd);
+    min-height: 20em;
+    height: 10vh;
+    color: white;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 3.5em;
+
+}
+
+.form_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 500px;
+    padding: 5em;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+}
+
+.form_group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #777;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #1B2DCC;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #0EAE93;
+}
+
+#tienda{
+    margin: 4em 2em 4em 2em;
+}
+
+#tienda h2{
+    margin: 4em 2em 4em 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Querys Mobil L 425px */
+
+@media (max-width:425px) {
+
+    .titulop {
+        height: 8em;
+    }
+
+
+    /* Modifica el area de texto */
+    .container_seccion1_index h1 {
+        /* background-color: #D33226; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1em 1.25em 0.5em 1.25em;
+        margin-bottom: 0;
+        font-size: 1em;
+        width: 100%;
+        height: 8em;
+    }
+
+    .container_seccion1_index {
+        /* background-color: #D33226; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: flex-start;
+        /* background-color: rgb(245, 133, 5); */
+        padding: 0.125em;
+        font-size: 2em;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container_animacion {
+        margin: 0;
+        width: 100%;
+        height: 2%;
+        /* background-color: #777; */
+        padding: 0em;
+
+        display: flex;
+        /* flex-wrap: nowrap; */
+        align-items: center;
+        margin: 1em;
+    }
+
+    .container_animacion svg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 40%;
+    }
+
+    @keyframes float2 {
+        0% {
+            transform: translateY(0);
+            transform: translate3d(8px, 10px, -10px) scale(1);
+        }
+
+        25% {
+            transform: translateY(-10px);
+            transform: translate3d(20px, 13px, -3px) scale(0.85);
+
+        }
+
+        50% {
+            transform: translateY(-13px);
+            transform: translate3d(-5px, -25px, -5px) scale(1.125);
+        }
+
+        100% {
+            transform: translateY(0);
+            transform: translate3d(8px, 10px, -10px) scale(1);
+        }
+    }
+
+
+}
