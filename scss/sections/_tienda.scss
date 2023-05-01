@@ -1,0 +1,24 @@
+.container_tienda {
+    padding: 2em;
+
+}
+
+.header_tienda {
+    background-image: linear-gradient(to right, #1B2DCC, #0059fd);
+    min-height: 10rem;
+    color: white;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 3rem;
+
+}
+
+/* Media Querys Mobile M 375px */
+
+@media (max-width:375px) {
+    #tienda{
+        margin: 0;
+    }
+}

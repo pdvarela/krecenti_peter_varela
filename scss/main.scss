@@ -1,0 +1,21 @@
+//Variables//
+
+@import './utilities/colors';
+@import './utilities/fonts';
+
+//Reset//
+@import'./utilities/reset';
+@import'./utilities/mixins';
+
+
+
+//Sections//
+@import './utilities/ajuste_main_general';
+@import './sections/body';
+@import './sections/header';
+@import './sections/main_index';
+@import './sections/footer';
+@import './sections/contacto';
+@import './sections/servicios';
+@import './sections/blog';
+@import './sections/tienda';

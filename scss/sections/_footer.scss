@@ -1,0 +1,68 @@
+/*---------------------------- FOOTER ------------------------- */
+footer {
+
+    background-color: $azulk;
+    width: 100%;
+    margin-top: auto;
+    padding: 2.5em 2em 0em 2em;
+    padding-bottom: 1em;
+    font-size: small;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    & ul {
+        padding: 1em 1em 0em 1em;
+    }
+
+    .containerf {
+
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.25em;
+
+        .logof {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 0.5em 1em 1em 0em;
+            margin: 1em 1em 1em 0em;
+
+            & img {
+                width: 4em;
+                /* Efectos logo footer  */
+                &:hover {
+                    transform: rotate(360deg);
+                    transition: 0.4s cubic-bezier(0.655, 0.1, 0.615, 0.555);
+                }
+            }
+        }
+
+        & li {
+            list-style: none;
+
+            & a {
+                text-decoration: none;
+                color: $blanco_puro;
+                /* Efectos li footer  */
+
+                &:hover {
+                    content: '';
+                    left: 0;
+                    bottom: -2px;
+                    height: 1px;
+                    width: 0;
+                    color: $blanco-variante;
+                    transition: width 0.4s ease-out;
+                }
+            }
+
+            & p {
+                text-decoration: none;
+                color: $blanco_puro;
+            }
+        }
+    }
+}
