@@ -1,8 +1,3 @@
-.container_tienda {
-    padding: 2em;
-
-}
-
 .header_tienda {
     background-image: linear-gradient(to right, #1B2DCC, #0059fd);
     min-height: 10rem;
@@ -15,10 +10,59 @@
 
 }
 
+.container_tienda {
+    padding: 2em;
+
+    @include cards;
+
+
+    .card-body {
+        background-color: $blanco-variante2;
+    }
+
+    .contenedor_boton {
+        padding: 4rem 0rem;
+        margin-top: 4rem;
+        margin-bottom: 8rem;
+
+        & h5{
+            padding-bottom: 2rem 0 1rem 0;
+        }
+
+        .btn {
+            background-color: $azulk;
+            color: $blanco_puro;
+            border-radius: 4px;
+
+        }
+
+        .menu-desplegable {
+            background-color: rgba(22, 56, 248, 0.192);
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
+            backdrop-filter: blur(5px);
+            overflow: hidden;
+            bottom: 1;
+
+           
+        }
+
+        a {
+            color: $negrok;
+            font-weight: 500;
+            &:hover{
+                scale: 1.0625;
+                background-color: rgba(50, 255, 159, 0.034);
+                backdrop-filter: blur(7px);
+
+            }
+        }
+    }
+}
+
 /* Media Querys Mobile M 375px */
 
 @media (max-width:375px) {
-    #tienda{
+    #tienda {
         margin: 0;
     }
 }

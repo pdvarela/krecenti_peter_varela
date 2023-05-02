@@ -1,21 +1,32 @@
-.container_blog {
+.blog {
     padding: 2em;
-}
+    
+    .card-title {
+        font-size: 16px;
+    }
+    
+    .card-body {
+        background-color: $blanco-variante2;
+        font-size: medium;
+        
+        & a {
+            background-color: $verdek;
+            border-radius: 4px;
+            border: none;
+            font-size: small;
+        }
+    }
 
-.card-body a{
-    background-color: $verdek;
-    border-radius: 4px;
-    border: none;
-    font-size: small;
-}
+    .page-link{
+        background-color: $verdek;
+        border-radius: 4px;
+        color: $blanco_puro;
 
-.blog .card-body{
-background-color:$blanco-variante2;
-font-size: medium;
-}
+        &:hover{
+            scale: 1.0625;
+            border-radius: 0;
+        }
+    }
 
-.blog .card-title{
-    font-size: 16px;
+    @include cards;
 }
-
-//Pendinete ajustar color + hover de botones y otros a considerar//

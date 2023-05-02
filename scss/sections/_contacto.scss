@@ -6,73 +6,95 @@
     padding: 5em 0em 5em 0em;
     height: 100%;
     background-color: $blanco_puro;
+
+    .form_contact {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        max-width: 45em;
+        padding: 5em 3em 5em 4em;
+        background-color: $blanco-variante2;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #0000001a;
+        width: 100vw;
+        border: 0.5px solid #e0e0e0;
+
+        .form_group {
+            margin-bottom: 20px;
+
+            label {
+
+                @include labels(600);
+
+            }
+
+            #opcion{
+                @include labels(300);
+                padding-top: 0.5rem;
+                padding-left: 0.5rem;
+            }
+
+            .genero{
+                display: flex;
+                flex-direction: row-reverse;
+                flex-wrap: wrap;
+
+            }
+            
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            select,
+            textarea {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+                box-sizing: border-box;
+                transition: border-color 0.3s ease-in-out;
+            }
+            
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="tel"]:focus,
+            select:focus,
+            textarea:focus {
+                outline: none;
+                border-color: $verdek;
+            }
+
+
+        }
+
+
+        button[type="submit"] {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: $azulk;
+            color: $blanco_puro;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: $verdek;
+            scale: 1.03125;
+        }
+
+    }
 }
 
 
-.form_contact {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    max-width: 45em;
-    padding: 5em 3em 5em 4em;
-    background-color: $blanco-variante2;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #0000001a;
-    width: 100vw;
-    border: 0.5px solid #e0e0e0;
-}
 
-.form_group {
-    margin-bottom: 20px;
-}
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease-in-out;
-}
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: $verdek;
-}
-
-button[type="submit"] {
-    display: block;
-    margin: 20px auto 0;
-    padding: 10px 20px;
-    background-color: $azulk;
-    color: $blanco_puro;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-button[type="submit"]:hover {
-    background-color: $verdek;
-    scale: 1.03125;
-}
 
 #tienda {
     margin: 4em 2em 4em 2em;

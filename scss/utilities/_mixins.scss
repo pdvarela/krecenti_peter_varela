@@ -73,6 +73,43 @@
 }
 
 
+//Mixin para cards//
+
+@mixin cards {
+
+    overflow: hidden;
+
+    .card-img-top:hover {
+        scale: 1.03125;
+        transition: scale 0.3s ease-in-out;
+    }
+
+    & h5 {
+        font-weight: 600;
+    }
+
+
+    .card-body a {
+
+        background-color: $azulk;
+
+        &:hover {
+            background-color: $verdek;
+            scale: 1.03125;
+            transition: background-color, scale 0.3s ease-in-out;
+        }
+    }
+}
+
+@mixin labels ($peso) {
+    font-weight:$peso;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+
 //Mixin para queries de las secciones similares//
 
 @mixin secciones_similares_queries {
