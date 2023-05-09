@@ -2,7 +2,8 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px; }
 
 main {
   display: flex;
@@ -166,14 +167,14 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 4rem; }
 
 .container_cabecera_section2 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 0rem 0rem 2rem 0rem;
   max-width: 1000px;
@@ -215,7 +216,7 @@ body {
   .container_seccion3_index article {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 4rem;
     display: flex; }
@@ -244,14 +245,14 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 4rem; }
 
 .container_cabecera_section4 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 0rem 0rem 2rem 0rem;
   max-width: 1000px;
@@ -396,8 +397,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    justify-content: space-around;
+    justify-content: center;
     padding: 3rem; }
   .container_cabecera_section2 {
     display: flex;
@@ -412,8 +412,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    justify-content: space-around;
+    justify-content: center;
     padding: 3rem; }
   .container_cabecera_section4 {
     display: flex;
@@ -622,10 +621,10 @@ body {
   align-items: center;
   padding: 2rem; }
 
-.header_tienda {
+.header_sections {
   padding-right: 1rem; }
 
-.header_tienda {
+.header_sections {
   background-image: linear-gradient(to right, #1B2DCC, #0059fd);
   min-height: 10rem;
   color: white;
@@ -633,7 +632,8 @@ body {
   display: flex;
   justify-content: left;
   align-items: center;
-  padding-left: 3rem; }
+  padding-left: 3rem;
+  font-size: 27px; }
 
 .container_tienda {
   padding: 2em;
