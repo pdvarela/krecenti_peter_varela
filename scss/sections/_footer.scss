@@ -6,7 +6,6 @@
     margin-top: auto;
     padding: 2.5em 2em 0em 2em;
     padding-bottom: 1em;
-    font-size: small;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -18,7 +17,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 0.25em;
+        gap: 0.5rem;
 
     }
 
@@ -40,11 +39,33 @@
             transition: 0.4s cubic-bezier(0.655, 0.1, 0.615, 0.555);
         }
     }
+    
+    .footer__iconos{
+        display: flex;
+        flex-direction: column;
+        padding-right: 0em;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.75rem;
+        color: $blanco_puro;
+       
+         
+    }
 
-    &__list,
-    &__redes,
+    &__imgiconos{
+        fill: $blanco_puro;
+        width: 35px;
+        padding-right: 0.75rem;
+    }
+
+    &__redes,&__list{
+        padding: 1em 1em 0em 0em;
+    }
+
+    
     &__legal {
-        padding: 1em 1em 0em 1em;
+        padding: 1rem 1rem 0rem 0.7rem;
+
 
 
     }
@@ -53,8 +74,24 @@
     &__redes-item,
     &__legal-item {
         list-style: none;
+        display: flex;
+        &:hover{
+
+            i,svg,a{
+
+                color: $verdek;
+                transition: width 1s ease;
+            }
+
+            i,svg{
+                //cambia el color de los svg y los inconos de font awesome
+                color: $verdek;
+                fill: $verdek;
+            }
+        }
 
     }
+
     
     &__list-link,
     &__redes-link,
@@ -62,24 +99,57 @@
 
         text-decoration: none;
         color: $blanco_puro;
+        font-weight: 100;
+        font-size: 18px;
+
+
+
         /* Efectos li footer  */
 
-        &:hover {
-            content: '';
-            left: 0;
-            bottom: -2px;
-            height: 1px;
-            width: 0;
-            color: $blanco-variante;
-            transition: width 0.4s ease-out;
-        }
+        // &:hover {
+        //     color: $blanco-variante;
+        //     transition: width 1s ease-in-out;
+        // }
 
         &--copyright {
             text-decoration: none;
             color: $blanco_puro;
+            font-size: 18px;
         }
 
     }
 
+}
+
+/* Media Querys Tablet 768px */
+
+
+@media (max-width:768px) {
+
+    .footer{
+
+        padding: 2rem 2rem;
+        
+        &__contenedor-logo {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        &__list{
+            padding: 0px 22px 0 14px;
+        }
+
+        &__redes{
+            padding-top: 0;
+            padding-left: 14px;
+            
+        }
+
+        &__legal{
+            padding-top: 0;
+        }
+    }
+
+     
 }
 
