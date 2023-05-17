@@ -47,9 +47,7 @@
         align-items: center;
         justify-content: center;
         padding-right: 0.75rem;
-        color: $blanco_puro;
-       
-         
+        color: $blanco_puro; 
     }
 
     &__imgiconos{
@@ -84,8 +82,9 @@
             }
 
             i,svg{
-                //cambia el color de los svg y los inconos de font awesome
+                //cambia el color de los inconos de font awesome
                 color: $verdek;
+                //cambia el color de los iconos svg
                 fill: $verdek;
             }
         }

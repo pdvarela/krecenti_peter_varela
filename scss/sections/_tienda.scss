@@ -1,4 +1,4 @@
-.header_sections {
+.main__header {
     background-image: linear-gradient(to right, #1B2DCC, #0059fd);
     min-height: 10rem;
     color: white;
@@ -34,7 +34,6 @@
             background-color: $azulk;
             color: $blanco_puro;
             border-radius: 4px;
-
         }
 
         .menu-desplegable {
