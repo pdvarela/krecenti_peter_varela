@@ -14,20 +14,28 @@
 .container_tienda {
     padding: 2em;
 
-    @include cards;
 
+    .card {
 
-    .card-body {
-        background-color: $blanco-variante2;
+        @include cards;
+        overflow: hidden;
+
+        .card-body {
+            background-color: $blanco-variante2;
+
+        }
+
+        
     }
-
+    
     .contenedor_boton {
         padding: 4rem 0rem;
         margin-top: 4rem;
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
 
-        & h5{
+        & h5 {
             padding-bottom: 2rem 0 1rem 0;
+            margin-bottom: 1rem;
         }
 
         .btn {
@@ -43,13 +51,14 @@
             overflow: hidden;
             bottom: 1;
 
-           
+
         }
 
         a {
             color: $negrok;
             font-weight: 500;
-            &:hover{
+
+            &:hover {
                 scale: 1.0625;
                 background-color: rgba(50, 255, 159, 0.034);
                 backdrop-filter: blur(7px);
@@ -57,6 +66,10 @@
             }
         }
     }
+
+
+
+
 }
 
 /* Media Querys Mobile M 375px */

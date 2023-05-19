@@ -40,8 +40,8 @@
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 0rem 0rem 2rem 0rem;
-    max-width: 1000px;
+    padding: 0rem 0rem 4rem 0rem;
+    max-width: 1280px;
 
     /* Ajuste de la numeracion de la seccion: 01. 02. */
     & h2 {
@@ -97,8 +97,7 @@
 
 @mixin cards {
 
-    overflow: hidden;
-
+    
     .card-img-top:hover {
         scale: 1.03125;
         transition: scale 0.3s ease-in-out;
@@ -106,13 +105,15 @@
 
     & h5 {
         font-weight: 600;
+        font-size: 24px;
+
     }
 
 
     .card-body a {
 
         background-color: $azulk;
-
+        border: none;
         &:hover {
             background-color: $verdek;
             scale: 1.03125;
@@ -125,6 +126,21 @@
     font-weight:$peso;
     display: block;
     margin-bottom: 5px;
+}
+
+//mixin botones
+@mixin botones_contacto ($display, $backgroundcolor, $color){
+    display: $display;
+    // margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: $backgroundcolor;
+    color: $color;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
 }
 
 

@@ -21,6 +21,8 @@
 
         .form_group {
             margin-bottom: 20px;
+            width: 100%;
+            padding: 1rem;
 
             label {
 
@@ -28,34 +30,36 @@
 
             }
 
-            #opcion{
+            #opcion {
                 @include labels(300);
                 padding-top: 0.5rem;
                 padding-left: 0.5rem;
             }
 
-            .genero{
+            .genero {
                 display: flex;
                 flex-direction: row-reverse;
                 flex-wrap: wrap;
-
+                justify-content: flex-end
             }
-            
+
             input[type="text"],
             input[type="email"],
             input[type="tel"],
             select,
             textarea {
                 display: block;
-                width: 100%;
+                width: 70%;
+                min-height: 45px;
                 padding: 10px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
-                font-size: 16px;
+                font-size: 14px;
                 box-sizing: border-box;
                 transition: border-color 0.3s ease-in-out;
+                margin: 0
             }
-            
+
             input[type="text"]:focus,
             input[type="email"]:focus,
             input[type="tel"]:focus,
@@ -63,38 +67,47 @@
             textarea:focus {
                 outline: none;
                 border-color: $verdek;
+                margin: 0;
             }
 
 
         }
 
+        .main__wrapper--botones-contacto {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
 
         button[type="submit"] {
-            display: block;
-            margin: 20px auto 0;
-            padding: 10px 20px;
-            background-color: $azulk;
-            color: $blanco_puro;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-        
-        button[type="submit"]:hover {
-            background-color: $verdek;
-            scale: 1.03125;
+            @include botones_contacto (inline-block, $azulk, $blanco_puro );
+            border: 1px solid $azulk;
+            margin-right: 1rem;
+
+            &:hover {
+                background-color: $verdek;
+                border: 1px solid $verdek;
+                scale: 1.03125;
+            }
         }
 
+        button[type="reset"] {
+            @include botones_contacto (inline-block, $blanco-variante2, $negrok );
+            border-radius: 0;
+            border: 1px solid $negrok;
+
+            &:hover {
+                border: 1px solid $rojok;
+                background-color: $rojok;
+                color: $blanco_puro;
+                font-weight: 500;
+                scale: 1.03125;
+
+            }
+        }
     }
 }
-
-
-
-
-
-
 
 #tienda {
     margin: 4em 2em 4em 2em;
@@ -102,4 +115,47 @@
 
 #tienda h2 {
     margin: 4em 2em 4em 2em;
+}
+
+@media (max-width:768px) {
+
+
+    .container_seccion_contacto {
+       
+        .form_contact {
+            padding: 3rem;
+
+            .form_group{
+                input[type="text"],
+                input[type="email"],
+                input[type="tel"],
+                select,
+                textarea {
+                    min-height: 35px;
+                    width: 100%;
+                    padding: 10px;
+                  
+                }
+            }
+            
+        }
+    }
+
+}
+
+@media (max-width:425px) {
+
+    .container_seccion_contacto {
+        .form_contact {
+            padding: 2rem;
+            .main__wrapper--botones-contacto {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+        }
+    }
 }
